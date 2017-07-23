@@ -1,5 +1,6 @@
-package threedplm_programs;
-
+/**
+ * Write a program to enter any word and return first character in that word which is having single occurance of it.
+ */
 import java.util.Scanner;
 
 public class FirstOccuranceChar {
@@ -24,19 +25,15 @@ public class FirstOccuranceChar {
 				if (arrChar[i] == arrChar[j] && arrChar[i]!=' ') {
 					arrChar[j]=' ';
 					count++;
-					System.out.println("count++"+count+arrChar[i]);
 					break;
 				}
 			}
 			if(arrChar[i]!=' ' && count == 0)
 			{
 				indexOfOccuranceOfFirstNonRepeatedChar = i;
-				System.out.println("indexOfOccuranceOfFirstNonRepeatedChar="+indexOfOccuranceOfFirstNonRepeatedChar);
 				break;
 			}
 		}
-		System.out.println("str"+str);
-		System.out.println("finalStr"+finalStr);
 		return finalStr.charAt(indexOfOccuranceOfFirstNonRepeatedChar);
 	}
 
